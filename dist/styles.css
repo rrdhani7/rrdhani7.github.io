@@ -57,11 +57,11 @@ button { font: inherit; }
 .hero-kicker { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); }
 .hero h1 {
   align-self: center;
-  max-width: 12ch;
+  max-width: 15ch;
   margin: 3rem 0;
-  font-size: clamp(3.8rem, 8.7vw, 9.5rem);
-  line-height: .88;
-  letter-spacing: -.075em;
+  font-size: clamp(3.5rem, 7.6vw, 8.2rem);
+  line-height: .92;
+  letter-spacing: -.068em;
   font-weight: 700;
 }
 .hero h1 em { color: var(--blue); font-style: normal; }
