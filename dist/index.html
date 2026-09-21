@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f5f7" />
+    <meta
+      name="description"
+      content="DeepQA is Dhani's field journal for AI-first quality engineering, practical tools, and evidence from real work."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23c8ff3d'/%3E%3C/svg%3E"
+    />
+    <title>DeepQA — AI-first quality engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="DeepQA home">
+        <span class="brand-mark">D</span>
+        <span>DeepQA</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#insights">Insights</a>
+        <a href="#lab">Tools lab</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-kicker mono">
+          <span>Independent field journal</span>
+          <span>Jakarta · 2026</span>
+        </div>
+        <h1 id="hero-title">
+          Quality engineering<br />
+          for software that <em>thinks.</em>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-intro">
+            I explore how AI changes software quality. I turn what works into clear reports,
+            practical tools, and better ways to ship.
+          </p>
+          <a class="round-link" href="#insights" aria-label="Read the latest insights">
+            <span>Explore</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+          </a>
+        </div>
+        <div class="signal-strip mono" aria-label="DeepQA principles">
+          <span>01 · Evidence over claims</span>
+          <span>02 · Systems over checklists</span>
+          <span>03 · Humans stay accountable</span>
+        </div>
+      </section>
+
+      <section id="insights" class="section insights" aria-labelledby="insights-title">
+        <div class="section-head">
+          <p class="eyebrow mono">Latest insights / 03</p>
+          <h2 id="insights-title">Notes from the edge of quality.</h2>
+          <p>Useful thinking for QA practitioners and engineering leaders working with AI.</p>
+        </div>
+
+        <div class="article-list">
+          <article class="featured-article">
+            <div class="article-meta mono">
+              <span>Field report</span>
+              <span>8 min read</span>
+            </div>
+            <div class="featured-body">
+              <span class="article-number">01</span>
+              <h3>When AI writes the test, who tests the reasoning?</h3>
+              <p>
+                A practical look at review boundaries, false confidence, and the signals that
+                still need a human decision.
+              </p>
+            </div>
+            <a href="#" aria-label="Read: When AI writes the test, who tests the reasoning?">
+              Read report <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="article-row">
+            <span class="article-number">02</span>
+            <div>
+              <p class="mono">Working note · 6 min</p>
+              <h3>A practical model for testing probabilistic systems</h3>
+            </div>
+            <a href="#" aria-label="Read: A practical model for testing probabilistic systems">↗</a>
+          </article>
+
+          <article class="article-row">
+            <span class="article-number">03</span>
+            <div>
+              <p class="mono">Stack note · 5 min</p>
+              <h3>What belongs in an AI-first QA stack?</h3>
+            </div>
+            <a href="#" aria-label="Read: What belongs in an AI-first QA stack?">↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="lab" class="section lab" aria-labelledby="lab-title">
+        <div class="lab-intro">
+          <p class="eyebrow mono">Tools lab / Experiments</p>
+          <h2 id="lab-title">Small tools for hard quality problems.</h2>
+          <p>
+            Each experiment starts with a real workflow problem. Useful ideas become working
+            tools. Weak ideas stay small.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card tool-card-main">
+            <div class="tool-top mono">
+              <span>Prototype 01</span>
+              <span class="status">Active</span>
+            </div>
+            <div class="tool-visual" aria-hidden="true">
+              <span class="axis axis-y">Impact</span>
+              <span class="axis axis-x">Confidence</span>
+              <i class="plot p1"></i><i class="plot p2"></i><i class="plot p3"></i>
+              <i class="plot p4"></i><i class="plot p5"></i>
+            </div>
+            <h3>Risk Map</h3>
+            <p>Turn unclear release risk into a shared, testable decision.</p>
+            <a href="#">Open experiment <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-top mono">
+              <span>Prototype 02</span>
+              <span>In progress</span>
+            </div>
+            <div class="prompt-lines" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <h3>Prompt Regression</h3>
+            <p>Track whether an AI workflow improves, drifts, or only looks better.</p>
+          </article>
+
+          <article class="tool-card inverse">
+            <div class="tool-top mono">
+              <span>Prototype 03</span>
+              <span>Concept</span>
+            </div>
+            <div class="signal-ring" aria-hidden="true"><span>72</span></div>
+            <h3>Release Signal</h3>
+            <p>Bring evidence, uncertainty, and release context into one view.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="about-label">
+          <p class="eyebrow mono">About / Dhani</p>
+          <div class="availability mono"><span></span> Open to thoughtful work</div>
+        </div>
+        <div class="about-copy">
+          <h2 id="about-title">QA practice, rebuilt around evidence and AI.</h2>
+          <p>
+            I work where quality strategy, automation, and AI meet. My focus is simple: make
+            complex delivery risks easier to see, discuss, and act on.
+          </p>
+          <div class="proof-grid">
+            <div><span class="mono">Focus</span><strong>AI-first QA systems</strong></div>
+            <div><span class="mono">Method</span><strong>Evidence before opinion</strong></div>
+            <div><span class="mono">Output</span><strong>Reports, tools, advisory</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="Contact">
+        <p class="mono">Have a hard quality problem?</p>
+        <a href="mailto:hello@example.com">Let’s examine it <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">D</span><span>DeepQA</span></a>
+      <p>Independent notes on software quality and AI.</p>
+      <p class="mono">© 2026 Dhani</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
