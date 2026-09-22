@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f5f7" />
+    <meta
+      name="description"
+      content="A practical workflow for using Claude to create grounded QA test cases from product requirements."
+    />
+    <title>Claude untuk workflow QA — DeepQA</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23b8d94a'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="DeepQA home">
+        <span class="brand-mark">D</span>
+        <span>DeepQA</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="../index.html#insights">Insights</a>
+        <a href="../index.html#lab">Tools lab</a>
+        <a href="../index.html#work">Selected work</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+    </header>
+
+    <main class="article-page" id="top">
+      <header class="article-hero">
+        <p class="eyebrow mono">Field report / 8 min read</p>
+        <h1>Claude untuk workflow QA</h1>
+        <p class="article-dek">
+          Cara mengumpulkan source of truth, menemukan discrepancy, dan membuat test case yang siap di-review.
+        </p>
+        <div class="article-meta-line mono">
+          <span>By Dhani · QA practitioner</span>
+          <a href="https://lnkd.in/p/dnWsBRdJ" rel="noreferrer">Original on LinkedIn ↗</a>
+        </div>
+      </header>
+
+      <article class="article-body" data-track-view="article-view" data-track-content="field-report">
+        <figure class="article-figure">
+          <img
+            src="../assets/claude-qa-workflow.jpg"
+            alt="Diagram of a Claude-assisted QA test case workflow"
+            width="800"
+            height="592"
+            loading="lazy"
+            data-fallback="article-image-fallback"
+          />
+          <div id="article-image-fallback" class="article-image-fallback" role="img" aria-label="Workflow diagram unavailable" hidden>
+            Workflow diagram unavailable. The article text remains available below.
+          </div>
+          <figcaption class="mono">A repeatable workflow for grounded test case generation.</figcaption>
+        </figure>
+
+        <div class="article-copy">
+          <p>Beberapa bulan terakhir saya mulai pakai Claude untuk membuat test case, dan ternyata cukup membantu untuk pekerjaan QA sehari-hari.</p>
+
+          <p>Prosesnya dimulai dengan mengumpulkan semua source of truth requirement — bisa dari deskripsi tiket Jira, comment di tiket, PRD, sampai percakapan Slack. Saya pakai MCP agar Claude bisa langsung akses sumber-sumber itu tanpa copy-paste manual satu-satu. Saya beri instruksi agar Claude benar-benar membaca baris demi baris agar tidak ada requirement yang tertinggal. Kalau ada Figma, saya juga share screenshot-nya sebagai referensi visual.</p>
+
+          <p>Setelah semua source of truth terkumpul, selanjutnya Claude saya minta untuk menemukan discrepancy dari masing-masing requirement. Ini penting agar kita bisa segera konfirmasi ke tim Product ataupun Tech sebelum fitur selesai dibuat dan proses testing dimulai. Karena discrepancy requirement akan menjadi potensi bug di kemudian hari.</p>
+
+          <p>Dari semua sumber itu, Claude breakdown menjadi test case dengan format spesifik yang ditentukan — termasuk dengan Ground Truth di tiap scenario. Ini penting untuk mengurangi tingkat halusinasi dari AI. Output-nya langsung jadi file Excel dan siap untuk di-review sebelum masuk ke Test Repository.</p>
+
+          <p>Terakhir, semua flow di atas saya rangkum menjadi markdown file berupa CLAUDE.md untuk claude-code, ataupun di section instruksi untuk Claude Desktop. Agar di kemudian hari kita bisa memakai workflow yang sama ketika membuat test case.</p>
+
+          <p>Apakah ada teman-teman yang memakai workflow seperti ini juga? Atau malah ada yang memakai workflow lain yang lebih oke?</p>
+
+          <aside class="article-related">
+            <p class="eyebrow mono">Next step</p>
+            <h2>See how the workflow fits the wider QA system.</h2>
+            <a href="../index.html#work" data-track="article-next-step" data-track-content="selected-work">View selected work <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <a class="brand" href="../index.html#top"><span class="brand-mark">D</span><span>DeepQA</span></a>
+      <p>Independent notes on software quality and AI.</p>
+      <p class="mono">© 2026 Dhani</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

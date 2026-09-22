@@ -11,7 +11,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23c8ff3d'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23b8d94a'/%3E%3C/svg%3E"
     />
     <title>DeepQA — AI-first quality engineering</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,6 +34,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#insights">Insights</a>
         <a href="#lab">Tools lab</a>
+        <a href="#work">Selected work</a>
         <a href="#about">About</a>
       </nav>
     </header>
@@ -86,7 +87,7 @@
                 still need a human decision.
               </p>
             </div>
-            <a href="#" aria-label="Read: When AI writes the test, who tests the reasoning?">
+            <a href="./articles/claude-qa-workflow.html" data-track="article-open" data-track-content="field-report" aria-label="Read: When AI writes the test, who tests the reasoning?">
               Read report <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -97,7 +98,7 @@
               <p class="mono">Working note · 6 min</p>
               <h3>A practical model for testing probabilistic systems</h3>
             </div>
-            <a href="#" aria-label="Read: A practical model for testing probabilistic systems">↗</a>
+            <span class="article-unavailable mono">Coming soon</span>
           </article>
 
           <article class="article-row">
@@ -106,7 +107,7 @@
               <p class="mono">Stack note · 5 min</p>
               <h3>What belongs in an AI-first QA stack?</h3>
             </div>
-            <a href="#" aria-label="Read: What belongs in an AI-first QA stack?">↗</a>
+            <span class="article-unavailable mono">Coming soon</span>
           </article>
         </div>
       </section>
@@ -135,7 +136,7 @@
             </div>
             <h3>Risk Map</h3>
             <p>Turn unclear release risk into a shared, testable decision.</p>
-            <a href="#">Open experiment <span aria-hidden="true">↗</span></a>
+            <span class="tool-unavailable mono">Concept only</span>
           </article>
 
           <article class="tool-card">
@@ -162,6 +163,38 @@
         </div>
       </section>
 
+      <section id="work" class="section work" aria-labelledby="work-title">
+        <div class="section-head">
+          <p class="eyebrow mono">Selected work / Proof</p>
+          <h2 id="work-title">Systems that make quality easier to trust.</h2>
+          <p>Sanitized examples of the workflows, tools, and decisions behind the notes.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card work-card-featured">
+            <div class="work-card-top mono"><span>Case study 01</span><span>Workflow</span></div>
+            <h3>Grounded QA workflow</h3>
+            <p>Requirements, source quotes, review gates, and test-case output in one repeatable loop.</p>
+            <div class="work-proof"><strong>15 products</strong><span>Two-week release cadence</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: this is a productivity claim, not a quality claim.</span></div>
+            <a href="./articles/claude-qa-workflow.html" data-track="work-open" data-track-content="workflow">Read the workflow <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="work-card">
+            <div class="work-card-top mono"><span>Case study 02</span><span>CI</span></div>
+            <h3>Parallel test runs</h3>
+            <p>Sharded browser suites with merged reports and a concurrency gate around shared backends.</p>
+            <div class="work-proof"><strong>263 scenarios</strong><span>Across four products</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: shared backends remain the scaling boundary.</span></div>
+            <a href="#insights" data-track="work-open" data-track-content="parallel-ci">Read the notes <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="work-card">
+            <div class="work-card-top mono"><span>Case study 03</span><span>Tooling</span></div>
+            <h3>Tools underneath</h3>
+            <p>Small tools for device setup, test management, coverage reporting, and read-only data questions.</p>
+            <div class="work-proof"><strong>Evidence first</strong><span>Sanitized and reviewable</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: private tool details stay out of the public page.</span></div>
+            <a href="#lab" data-track="work-open" data-track-content="qa-tooling">See the tools lab <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
       <section id="about" class="section about" aria-labelledby="about-title">
         <div class="about-label">
           <p class="eyebrow mono">About / Dhani</p>
@@ -181,9 +214,9 @@
         </div>
       </section>
 
-      <section class="closing" aria-label="Contact">
-        <p class="mono">Have a hard quality problem?</p>
-        <a href="mailto:hello@example.com">Let’s examine it <span aria-hidden="true">↗</span></a>
+      <section class="closing" aria-label="Continue reading">
+        <p class="mono">Want to see the workflow?</p>
+        <a href="./articles/claude-qa-workflow.html" data-track="closing-next-step" data-track-content="workflow">Start here <span aria-hidden="true">↗</span></a>
       </section>
     </main>
 

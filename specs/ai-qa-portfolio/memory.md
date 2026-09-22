@@ -43,3 +43,10 @@
 | Handoff | Provider/model | Outcome |
 | --- | --- | --- |
 | None | None | No delegation |
+
+## Development workflow approval
+
+- Dhani approved the PRD, the proposed metrics, and the pipeline through `/plan-implement` on 2026-09-22.
+- FE, BE, and database work must follow best practice. For this static portfolio, avoid a backend or database unless an approved requirement needs one.
+- Product, technical, contract, verification, and task artifacts are approved for implementation on 2026-09-22.
+- The current release uses static HTML/CSS/JS only. No backend, database, new dependency, or external API is required.
