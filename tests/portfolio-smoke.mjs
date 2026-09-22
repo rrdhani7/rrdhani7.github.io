@@ -25,6 +25,8 @@ const styles = read("dist/styles.css");
 
 assert.match(home, /<main\b[^>]*id="top"/);
 assert.match(home, /href="\.\/articles\/claude-qa-workflow\.html"/);
+assert.ok(home.includes("<h3>Claude untuk workflow QA</h3>"));
+assert.ok(home.includes("source of truth"));
 assert.match(home, /id="work"/);
 assert.match(home, /href="#work"/);
 assert.doesNotMatch(home, /hello@example\.com/);
