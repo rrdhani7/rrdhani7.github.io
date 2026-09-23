@@ -1,16 +1,19 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4f5f7" />
-    <meta name="description" content="Claude untuk workflow QA" />
+    <meta
+      name="description"
+      content="DeepQA — a personal space for Dhani's QA writing."
+    />
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23b8d94a'/%3E%3C/svg%3E"
     />
-    <title>Claude untuk workflow QA — DeepQA</title>
+    <title>DeepQA — Dhani</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,19 +28,127 @@
         <span class="brand-mark">D</span>
         <span>DeepQA</span>
       </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#insights">Insights</a>
+        <a href="#lab">Tools lab</a>
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+      </nav>
     </header>
 
-    <main class="article-page article-index" id="top">
-      <header class="article-hero">
-        <h1>Claude untuk workflow QA</h1>
-        <div class="article-meta-line">
-          <a href="./articles/claude-qa-workflow.html" data-track="article-open" data-track-content="article">
-            Buka artikel ↗
-          </a>
-          <a href="https://lnkd.in/p/dnWsBRdJ" rel="noreferrer">LinkedIn ↗</a>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-kicker mono">
+          <span>Notes by Dhani · QA practitioner</span>
+          <span>Jakarta, Indonesia</span>
         </div>
-      </header>
+        <h1 id="hero-title">
+          Hi, I’m Dhani.<br />
+          I’m learning how AI can make software quality <em>better.</em>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-intro">
+            I work in QA, try ideas in real workflows, and write down what I learn. This is
+            where I share the parts that might help others.
+          </p>
+          <a class="round-link" href="#insights" aria-label="Read the latest insights">
+            <span>My notes</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+          </a>
+        </div>
+        <div class="signal-strip mono" aria-label="DeepQA principles">
+          <span>01 · AI inside daily QA work</span>
+          <span>02 · Real workflows, documented</span>
+          <span>03 · Reports · Tools · Advisory</span>
+        </div>
+      </section>
+
+      <section id="insights" class="section insights" aria-labelledby="insights-title">
+        <div class="section-head">
+          <p class="eyebrow mono">Insights</p>
+          <h2 id="insights-title">Tulisan</h2>
+        </div>
+
+        <div class="article-list">
+          <article class="featured-article">
+            <div class="article-meta mono"><span>01</span><span>Claude untuk workflow QA</span></div>
+            <div class="featured-body">
+              <h3>Claude untuk workflow QA</h3>
+              <p>Beberapa bulan terakhir saya mulai pakai Claude untuk membuat test case, dan ternyata cukup membantu untuk pekerjaan QA sehari-hari.</p>
+            </div>
+            <a href="./articles/claude-qa-workflow.html" data-track="article-open" data-track-content="article" aria-label="Read: Claude untuk workflow QA">
+              Buka artikel <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="article-row empty-state">
+            <span class="article-number">02</span>
+            <div>
+              <p class="mono">Empty state</p>
+              <h3>Belum ada tulisan lain.</h3>
+            </div>
+          </article>
+
+          <article class="article-row empty-state">
+            <span class="article-number">03</span>
+            <div>
+              <p class="mono">Empty state</p>
+              <h3>Belum ada tulisan lain.</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="lab" class="section lab" aria-labelledby="lab-title">
+        <div class="lab-intro">
+          <p class="eyebrow mono">Tools lab</p>
+          <h2 id="lab-title">Belum ada tools.</h2>
+          <p class="empty-state-copy">Konten akan ditambahkan di sini.</p>
+        </div>
+        <div class="tool-grid">
+          <div class="empty-state empty-state-wide" role="status">
+            <p class="mono">Empty state</p>
+            <h3>Belum ada tools yang dipublikasikan.</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section work" aria-labelledby="work-title">
+        <div class="section-head">
+          <p class="eyebrow mono">Selected work</p>
+          <h2 id="work-title">Belum ada selected work.</h2>
+          <p class="empty-state-copy">Konten akan ditambahkan di sini.</p>
+        </div>
+        <div class="empty-state empty-state-wide" role="status">
+          <p class="mono">Empty state</p>
+          <h3>Belum ada project yang dipublikasikan.</h3>
+        </div>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="about-label">
+          <p class="eyebrow mono">About</p>
+        </div>
+        <div class="about-copy">
+          <h2 id="about-title">Belum ada profil.</h2>
+          <p class="empty-state-copy">Konten akan ditambahkan di sini.</p>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="Continue reading">
+        <p class="mono">Claude untuk workflow QA</p>
+        <a href="./articles/claude-qa-workflow.html" data-track="closing-next-step" data-track-content="article">
+          Buka artikel <span aria-hidden="true">↗</span>
+        </a>
+      </section>
     </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">D</span><span>DeepQA</span></a>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

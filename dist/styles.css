@@ -105,6 +105,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .article-row > a { font-size: 1.5rem; }
 .article-unavailable { color: var(--muted); font-size: .65rem; white-space: nowrap; }
 .tool-unavailable { display: inline-block; align-self: flex-start; margin-top: .5rem; color: var(--muted); font-size: .65rem; }
+.empty-state { color: var(--muted); }
+.empty-state h3 { margin: 0; color: var(--ink); font-size: clamp(1.35rem, 2.5vw, 2.2rem); letter-spacing: -.04em; }
+.empty-state p { margin: 0 0 .8rem; color: var(--muted); font-size: .7rem; }
+.empty-state-wide { min-height: 16rem; display: grid; place-content: center; gap: .5rem; padding: 2rem; border: 1px dashed var(--line); border-radius: var(--radius); text-align: center; }
+.empty-state-wide p { margin: 0; }
+.empty-state-copy { color: var(--muted); }
 
 .work { background: #eef1f5; }
 .work-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 1rem; }
