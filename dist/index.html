@@ -1,19 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4f5f7" />
-    <meta
-      name="description"
-      content="DeepQA is Dhani's field journal for AI-first quality engineering, practical tools, and evidence from real work."
-    />
+    <meta name="description" content="Claude untuk workflow QA" />
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111624'/%3E%3Cpath d='M18 18h17c10 0 16 5 16 14S45 46 35 46H18V18Zm10 8v12h7c4 0 6-2 6-6s-2-6-6-6h-7Z' fill='%23b8d94a'/%3E%3C/svg%3E"
     />
-    <title>DeepQA — AI-first quality engineering</title>
+    <title>Claude untuk workflow QA — DeepQA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,203 +25,19 @@
         <span class="brand-mark">D</span>
         <span>DeepQA</span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-        <a href="#insights">Insights</a>
-        <a href="#lab">Tools lab</a>
-        <a href="#work">Selected work</a>
-        <a href="#about">About</a>
-      </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-kicker mono">
-          <span>Notes by Dhani · QA practitioner</span>
-          <span>Jakarta, Indonesia</span>
-        </div>
-        <h1 id="hero-title">
-          Hi, I’m Dhani.<br />
-          I’m learning how AI can make software quality <em>better.</em>
-        </h1>
-        <div class="hero-bottom">
-          <p class="hero-intro">
-            I work in QA, try ideas in real workflows, and write down what I learn. This is
-            where I share the parts that might help others.
-          </p>
-          <a class="round-link" href="#insights" aria-label="Read the latest insights">
-            <span>My notes</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+    <main class="article-page article-index" id="top">
+      <header class="article-hero">
+        <h1>Claude untuk workflow QA</h1>
+        <div class="article-meta-line">
+          <a href="./articles/claude-qa-workflow.html" data-track="article-open" data-track-content="article">
+            Buka artikel ↗
           </a>
+          <a href="https://lnkd.in/p/dnWsBRdJ" rel="noreferrer">LinkedIn ↗</a>
         </div>
-        <div class="signal-strip mono" aria-label="DeepQA principles">
-          <span>01 · AI inside daily QA work</span>
-          <span>02 · Real workflows, documented</span>
-          <span>03 · Reports · Tools · Advisory</span>
-        </div>
-      </section>
-
-      <section id="insights" class="section insights" aria-labelledby="insights-title">
-        <div class="section-head">
-          <p class="eyebrow mono">Latest insights / 03</p>
-          <h2 id="insights-title">Notes from the edge of quality.</h2>
-          <p>Useful thinking for QA practitioners and engineering leaders working with AI.</p>
-        </div>
-
-        <div class="article-list">
-          <article class="featured-article">
-            <div class="article-meta mono">
-              <span>Field report</span>
-              <span>8 min read</span>
-            </div>
-            <div class="featured-body">
-              <span class="article-number">01</span>
-              <h3>Claude untuk workflow QA</h3>
-              <p>
-                Cara mengumpulkan source of truth, menemukan discrepancy, dan membuat test case
-                yang siap di-review.
-              </p>
-            </div>
-            <a href="./articles/claude-qa-workflow.html" data-track="article-open" data-track-content="field-report" aria-label="Read: Claude untuk workflow QA">
-              Read report <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article class="article-row">
-            <span class="article-number">02</span>
-            <div>
-              <p class="mono">Working note · 6 min</p>
-              <h3>A practical model for testing probabilistic systems</h3>
-            </div>
-            <span class="article-unavailable mono">Coming soon</span>
-          </article>
-
-          <article class="article-row">
-            <span class="article-number">03</span>
-            <div>
-              <p class="mono">Stack note · 5 min</p>
-              <h3>What belongs in an AI-first QA stack?</h3>
-            </div>
-            <span class="article-unavailable mono">Coming soon</span>
-          </article>
-        </div>
-      </section>
-
-      <section id="lab" class="section lab" aria-labelledby="lab-title">
-        <div class="lab-intro">
-          <p class="eyebrow mono">Tools lab / Experiments</p>
-          <h2 id="lab-title">Small tools for hard quality problems.</h2>
-          <p>
-            Each experiment starts with a real workflow problem. Useful ideas become working
-            tools. Weak ideas stay small.
-          </p>
-        </div>
-
-        <div class="tool-grid">
-          <article class="tool-card tool-card-main">
-            <div class="tool-top mono">
-              <span>Prototype 01</span>
-              <span class="status">Active</span>
-            </div>
-            <div class="tool-visual" aria-hidden="true">
-              <span class="axis axis-y">Impact</span>
-              <span class="axis axis-x">Confidence</span>
-              <i class="plot p1"></i><i class="plot p2"></i><i class="plot p3"></i>
-              <i class="plot p4"></i><i class="plot p5"></i>
-            </div>
-            <h3>Risk Map</h3>
-            <p>Turn unclear release risk into a shared, testable decision.</p>
-            <span class="tool-unavailable mono">Concept only</span>
-          </article>
-
-          <article class="tool-card">
-            <div class="tool-top mono">
-              <span>Prototype 02</span>
-              <span>In progress</span>
-            </div>
-            <div class="prompt-lines" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <h3>Prompt Regression</h3>
-            <p>Track whether an AI workflow improves, drifts, or only looks better.</p>
-          </article>
-
-          <article class="tool-card inverse">
-            <div class="tool-top mono">
-              <span>Prototype 03</span>
-              <span>Concept</span>
-            </div>
-            <div class="signal-ring" aria-hidden="true"><span>72</span></div>
-            <h3>Release Signal</h3>
-            <p>Bring evidence, uncertainty, and release context into one view.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="work" class="section work" aria-labelledby="work-title">
-        <div class="section-head">
-          <p class="eyebrow mono">Selected work / Proof</p>
-          <h2 id="work-title">Systems that make quality easier to trust.</h2>
-          <p>Sanitized examples of the workflows, tools, and decisions behind the notes.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card work-card-featured">
-            <div class="work-card-top mono"><span>Case study 01</span><span>Workflow</span></div>
-            <h3>Grounded QA workflow</h3>
-            <p>Requirements, source quotes, review gates, and test-case output in one repeatable loop.</p>
-            <div class="work-proof"><strong>15 products</strong><span>Two-week release cadence</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: this is a productivity claim, not a quality claim.</span></div>
-            <a href="./articles/claude-qa-workflow.html" data-track="work-open" data-track-content="workflow">Read the workflow <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="work-card">
-            <div class="work-card-top mono"><span>Case study 02</span><span>CI</span></div>
-            <h3>Parallel test runs</h3>
-            <p>Sharded browser suites with merged reports and a concurrency gate around shared backends.</p>
-            <div class="work-proof"><strong>263 scenarios</strong><span>Across four products</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: shared backends remain the scaling boundary.</span></div>
-            <a href="#insights" data-track="work-open" data-track-content="parallel-ci">Read the notes <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="work-card">
-            <div class="work-card-top mono"><span>Case study 03</span><span>Tooling</span></div>
-            <h3>Tools underneath</h3>
-            <p>Small tools for device setup, test management, coverage reporting, and read-only data questions.</p>
-            <div class="work-proof"><strong>Evidence first</strong><span>Sanitized and reviewable</span><span class="work-source mono">Owner brief / sanitized</span><span class="work-limit">Limit: private tool details stay out of the public page.</span></div>
-            <a href="#lab" data-track="work-open" data-track-content="qa-tooling">See the tools lab <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </section>
-
-      <section id="about" class="section about" aria-labelledby="about-title">
-        <div class="about-label">
-          <p class="eyebrow mono">About / Dhani</p>
-          <div class="availability mono"><span></span> Open to thoughtful work</div>
-        </div>
-        <div class="about-copy">
-          <h2 id="about-title">QA practice, rebuilt around evidence and AI.</h2>
-          <p>
-            I work where quality strategy, automation, and AI meet. My focus is simple: make
-            complex delivery risks easier to see, discuss, and act on.
-          </p>
-          <div class="proof-grid">
-            <div><span class="mono">Focus</span><strong>AI-first QA systems</strong></div>
-            <div><span class="mono">Method</span><strong>Evidence before opinion</strong></div>
-            <div><span class="mono">Output</span><strong>Reports, tools, advisory</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="closing" aria-label="Continue reading">
-        <p class="mono">Want to see the workflow?</p>
-        <a href="./articles/claude-qa-workflow.html" data-track="closing-next-step" data-track-content="workflow">Start here <span aria-hidden="true">↗</span></a>
-      </section>
+      </header>
     </main>
-
-    <footer>
-      <a class="brand" href="#top"><span class="brand-mark">D</span><span>DeepQA</span></a>
-      <p>Independent notes on software quality and AI.</p>
-      <p class="mono">© 2026 Dhani</p>
-    </footer>
 
     <script src="./script.js"></script>
   </body>

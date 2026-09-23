@@ -25,14 +25,11 @@ const styles = read("dist/styles.css");
 
 assert.match(home, /<main\b[^>]*id="top"/);
 assert.match(home, /href="\.\/articles\/claude-qa-workflow\.html"/);
-assert.ok(home.includes("<h3>Claude untuk workflow QA</h3>"));
-assert.ok(home.includes("source of truth"));
-assert.match(home, /id="work"/);
-assert.match(home, /href="#work"/);
+assert.ok(home.includes("<h1>Claude untuk workflow QA</h1>"));
+assert.doesNotMatch(home, /When AI writes the test/);
+assert.doesNotMatch(home, /Tools lab|Selected work|About/);
 assert.doesNotMatch(home, /hello@example\.com/);
 assert.doesNotMatch(home, /href="#"/);
-assert.equal((home.match(/class="work-card(?: |")/g) || []).length, 3);
-assert.equal((home.match(/class="work-limit/g) || []).length, 3);
 assert.match(styles, /:focus-visible/);
 assert.match(article, /<main\b/);
 assert.match(article, /<h1\b/);
@@ -42,6 +39,8 @@ assert.match(article, /width="800"/);
 assert.match(article, /height="592"/);
 assert.match(article, /class="article-image-fallback"/);
 assert.match(article, /data-track-view="article-view"/);
+assert.match(article, /Beberapa bulan terakhir saya mulai pakai Claude/);
+assert.doesNotMatch(article, /See how the workflow fits the wider QA system/);
 assert.match(script, /deepqa:track/);
 assert.match(script, /DEEPQA_ANALYTICS_ENDPOINT/);
 
