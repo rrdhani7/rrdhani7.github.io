@@ -105,12 +105,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .article-row > a { font-size: 1.5rem; }
 .article-unavailable { color: var(--muted); font-size: .65rem; white-space: nowrap; }
 .tool-unavailable { display: inline-block; align-self: flex-start; margin-top: .5rem; color: var(--muted); font-size: .65rem; }
-.empty-state { color: var(--muted); }
-.empty-state h3 { margin: 0; color: var(--ink); font-size: clamp(1.35rem, 2.5vw, 2.2rem); letter-spacing: -.04em; }
-.empty-state p { margin: 0 0 .8rem; color: var(--muted); font-size: .7rem; }
-.empty-state-wide { min-height: 16rem; display: grid; place-content: center; gap: .5rem; padding: 2rem; border: 1px dashed var(--line); border-radius: var(--radius); text-align: center; }
-.empty-state-wide p { margin: 0; }
-.empty-state-copy { color: var(--muted); }
+.insights .article-list { gap: clamp(1.5rem, 3vw, 3rem); border-top: 0; }
+.insights .featured-article { grid-row: auto; min-height: 28rem; }
+.insight-pending { display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.insight-pending span { color: var(--blue); font-size: .75rem; }
+.insight-pending p { max-width: 18ch; margin: 1rem 0 0; font-size: clamp(1.6rem, 3vw, 2.8rem); line-height: 1.1; letter-spacing: -.045em; }
+.quiet-section { padding-block: 5.5rem; }
+.quiet-section .section-head { margin-bottom: 0; }
+.quiet-section .section-head > p:last-child { max-width: 18rem; margin: .5rem 0 0; font-size: 1rem; line-height: 1.5; }
+.quiet-section.about .about-copy > p { max-width: 30rem; margin: 1.5rem 0 0; font-size: 1rem; line-height: 1.5; }
 
 .work { background: #eef1f5; }
 .work-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 1rem; }
@@ -213,6 +216,8 @@ footer p { margin: 0; color: #aeb5c3; font-size: .8rem; }
   .section-head > p:last-child, .lab-intro > p:last-child { max-width: 30rem; }
   .article-list { grid-template-columns: 1fr; }
   .featured-article { min-height: 30rem; }
+  .insights .featured-article { min-height: 30rem; }
+  .insight-pending { min-height: 10rem; }
   .tool-grid { grid-template-columns: 1fr 1fr; }
   .tool-card-main { grid-column: 1 / -1; }
   .work-grid { grid-template-columns: 1fr 1fr; }
