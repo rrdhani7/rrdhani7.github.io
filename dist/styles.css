@@ -191,8 +191,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 
 .closing { min-height: 62vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6rem 4vw; text-align: center; color: white; background: var(--blue); }
 .closing p { font-size: .75rem; }
-.closing a { max-width: 11ch; font-size: clamp(3.2rem, 8vw, 8rem); line-height: .95; letter-spacing: -.07em; font-weight: 700; }
-.closing a span { color: var(--acid); }
+.closing h2 { margin: .75rem 0 2rem; font-size: clamp(3.2rem, 8vw, 8rem); line-height: .95; letter-spacing: -.07em; font-weight: 700; }
+.contact-link { display: inline-flex; align-items: center; gap: .75rem; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-weight: 700; }
+.contact-link span { color: var(--acid); }
 footer { display: grid; grid-template-columns: 1fr 1fr auto; gap: 2rem; align-items: center; padding: 2rem 4vw; color: white; background: var(--ink); }
 footer p { margin: 0; color: #aeb5c3; font-size: .8rem; }
 
