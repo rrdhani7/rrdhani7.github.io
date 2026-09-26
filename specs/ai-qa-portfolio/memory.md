@@ -50,3 +50,47 @@
 - FE, BE, and database work must follow best practice. For this static portfolio, avoid a backend or database unless an approved requirement needs one.
 - Product, technical, contract, verification, and task artifacts are approved for implementation on 2026-09-22.
 - The current release uses static HTML/CSS/JS only. No backend, database, new dependency, or external API is required.
+
+## Compact journal revision — 2026-09-26
+
+- Lifecycle: ACTIVE. Owner: Dhani. Next consumer: design review. Review trigger: more published content or new tools.
+- Goal / tier: Quick, reversible layout change. Make the home page feel complete with one article.
+- User approval: “oke coba implement” approves the compact design proposed in this task. Supersedes the earlier four-section home decision for this revision.
+- Decision: 880px content width, short Indonesian introduction, stacked article list, compact LinkedIn footer. Preserve typefaces and blue/lime palette. Remove empty tool and pending-content sections; merge About into the introduction.
+- Changed files: dist/index.html, dist/styles.css, dist/articles/claude-qa-workflow.html, tests/portfolio-smoke.mjs.
+- Review: home styles use journal classes; article navigation no longer references removed sections. No backend, dependency, or analytics changes.
+- Focused QA PASS: portfolio and analytics smoke checks; browser inspection at desktop and mobile widths (1280px and 375px, no horizontal overflow); article opens and “Semua tulisan” returns to the home list.
+- Delivery: local preview on port 4173. Not published. Visual sign-off pending owner review.
+
+## Personal editorial revision — 2026-09-26
+
+- Lifecycle: ACTIVE. Owner: Dhani. Next consumer: owner visual review. Review trigger: supplied portrait or changed content.
+- User approved implementation of the Juliardi/Brian-inspired direction. Supersedes the compact journal visual treatment above.
+- Quick scope: 960px layout, Dhani as primary identity with DeepQA secondary, direct QA/AI introduction, warm white and neutral type, restrained blue, two-column desktop intro, stacked mobile intro, article rows without cards.
+- No portrait asset exists in this project. Use a decorative CSS monogram as an explicit temporary substitute; a real portrait remains optional owner input.
+- Shared article header and palette match the new home page. Article body content and analytics unchanged.
+- Focused QA PASS: existing portfolio and analytics smoke checks, diff whitespace check, browser visual inspection, 375px and 1280px document widths without horizontal overflow, article open and return to home.
+- Delivery: local preview only; not published. Visual sign-off pending owner review.
+
+## Owner portrait — 2026-09-26
+
+- Owner supplied IMG_2537 2.HEIC for the agreed portrait slot. Replaced the temporary monogram with the supplied photo.
+- Converted to an optimized 1200×1600 JPEG; preserved the original file. Display crop and grayscale are CSS-only, with descriptive alt text.
+- Validation: both smoke suites and whitespace check pass. Browser confirms image loads; checked standard preview and 375px mobile with no horizontal overflow.
+- Local preview only; not published.
+
+## Approved Figma direction — 2026-09-27
+
+- Lifecycle: ACTIVE. Owner: Dhani. Next consumer: PRD approval and `/plan-product-spec`. Review trigger: scope, content, contact destinations, or metric change.
+- Dhani approved the Figma direction as the visual source of truth for the next implementation.
+- Decision: keep one Home page with a focused hero, a compact company proof line inside the hero, Catatan, and Proyek. Do not use a separate Pengalaman section or separate About page in the first release.
+- Decision: keep one note detail path with the approved text, diagram, and a return path to Home. Use the same type, spacing, thumbnail proportion, and no-underline style for Catatan and Proyek.
+ - PRD revision: `specs/ai-qa-portfolio/prd.md` and `metrics.md` approved by Dhani on 2026-09-27 for the development workflow through `/plan-implement`.
+
+## Plan implement complete — 2026-09-27
+
+- Lifecycle: ACTIVE. Owner: Dhani. Next consumer: `/impl-review`. Review trigger: implementation review or QA result.
+- Tasks T001-T012 PASS. The implementation matches the approved Home hero, compact proof line, Catatan, Proyek, note detail, local thumbnails, and disabled-by-default analytics.
+- Validation: `node --check dist/script.js`, portfolio smoke, analytics smoke, and `git diff --check` PASS.
+- Independent reviewer PASS after fixing the article return link from `#insights` to `#notes`.
+- Commit: implementation commit recorded in Git after all task and regression checks passed.

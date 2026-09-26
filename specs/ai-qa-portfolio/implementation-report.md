@@ -1,42 +1,48 @@
-# DeepQA Portfolio Website v1 - Implementation Report
+# DeepQA Portfolio Website — Implementation Report
 
 **Lifecycle**: ACTIVE
 **Owner**: Dhani
-**Next consumer**: `/impl-review`
+**Next consumer**: /impl-review
 **Review trigger**: implementation, review, or QA change
 
 **Status**: PASS
-**Diff range**: `4ce44a4`..`b3876b5`
-**Commands**: build `none (static site)` · test `node --check dist/script.js && node tests/portfolio-smoke.mjs && node tests/analytics-smoke.mjs` · run `static host configured by .openai/hosting.json`
+**Baseline**: 48ac383 feat: replace work section with contact
+**Diff range**: 48ac383..HEAD
+**Commands**: build none (static site) · test node --check dist/script.js && node tests/portfolio-smoke.mjs && node tests/analytics-smoke.mjs · run local static host
 
-## User Stories
+## User stories
 
-- US1 Useful article path: PASS — the home page opens the approved article, local image, source note, and one related next step. JavaScript is not required for reading or navigation.
-- US2 Evidence and fit: PASS — selected-work cards show scope, source labels, limits, relevant links, responsive layout, and no placeholder contact.
-- US3 Portfolio measurement: PASS — local `deepqa:track` events work without a backend, endpoint failures do not block navigation, and payloads contain no personal data.
+- US1 Hero and proof: PASS — Home shows the approved positioning, portrait, safe profile actions, and compact Verint, Tokopedia, Sorabel, and Populix proof line.
+- US2 Catatan, Proyek, and note detail: PASS — Home shows one note and three project rows with local proportional thumbnails. The note page keeps full text, diagram, source link, and return path.
+- US3 Measurement: PASS — Home and note emit privacy-light local events. Network delivery remains disabled unless an endpoint is configured.
 
 ## Validation
 
-- All tasks: PASS.
+- T001-T012: PASS.
 - Independent story reviews: PASS for US1, US2, and US3.
 - Final regression: PASS.
-- `node --check dist/script.js`: PASS.
-- `node tests/portfolio-smoke.mjs`: PASS.
-- `node tests/analytics-smoke.mjs`: PASS.
-- `git diff --check`: PASS.
-- Git: clean at commit `b3876b5`.
+- node --check dist/script.js: PASS.
+- node tests/portfolio-smoke.mjs: PASS.
+- node tests/analytics-smoke.mjs: PASS.
+- git diff --check: PASS.
+- Responsive browser inspection: static server binding is restricted in this environment; markup, intrinsic image dimensions, focus styles, and mobile media rules were reviewed from source and smoke checks.
 
 ## Deviations
 
-- No backend or database was added. The approved technical spec states that the static reading flow does not need server state.
-- Analytics events remain disabled for network delivery until Dhani approves a provider and consent rule.
-- The contact CTA leads to the article workflow until Dhani supplies an approved public contact destination. The placeholder email was removed.
-- Browser smoke was not run against a local server because the sandbox does not allow binding a local port. Static and script checks passed.
+- WhatsApp, CV, and email remain inactive until Dhani supplies final public destinations.
+- Project rows remain non-actionable until their detail destinations and source content are approved.
+- No backend, database, new dependency, or analytics provider was added.
+- The 8x productivity statement remains an owner claim until its scope and method are approved.
+
+## Review findings fixed
+
+- Updated the article header link from the removed Home anchor to the current Catatan anchor.
+- Added a smoke assertion for the article-to-Catatan return path.
 
 ## Retrospective
 
-**Went well**: The work stayed inside the static stack, used local assets, added focused tests, and caught review issues before each checkpoint.
-**Went wrong**: The first reviews found progressive-navigation, evidence-limit, and image-fallback gaps.
-**Improve**: Keep proof labels, limits, no-JavaScript behavior, and asset checks in the first test pass.
+**Went well**: The implementation kept the static stack, matched the approved Figma structure, used local assets, and passed focused tests.
+**Went wrong**: A renamed Home anchor was not updated in the note page on the first pass.
+**Improve**: Add cross-page anchor checks whenever a Home section is renamed.
 
-Next stage: `/impl-review`
+Next stage: /impl-review

@@ -3,13 +3,13 @@
 **Lifecycle**: ACTIVE
 **Owner**: Dhani
 **Next consumer**: PRD approval and product validation
-**Review trigger**: Analytics setup, visitor interviews, or a scope change
+**Review trigger**: analytics setup, visitor interviews, or a scope change
 
 ## Proposed main number
 
-**Contextual next-step rate**: start at **0% tracked** because measurement is not installed; target **10% of eligible sessions within 8 weeks of launch**.
+**Qualified next-step rate**: start at **0% tracked** because measurement is not installed; target **10% of eligible sessions within 8 weeks of launch**.
 
-An eligible session is a first-time visit that opens an article, report, case study, or tool page. A next step is one relevant link click from that content.
+An eligible session opens the Home page, a note, or a project summary. A qualified next step is one approved click to a related note, project detail, report, tool, consultation, career profile, or contact destination.
 
 ## Guardrail
 
@@ -20,5 +20,6 @@ An eligible session is a first-time visit that opens an article, report, case st
 - No visitor analytics exist yet.
 - No visitor interview supports the 10% target.
 - The target is a proposal for user approval, not a measured result.
+- Final event names and the analytics provider remain open questions.
 
-**Status**: APPROVED — approved by Dhani on 2026-09-22
+**Status**: APPROVED — approved by Dhani on 2026-09-27

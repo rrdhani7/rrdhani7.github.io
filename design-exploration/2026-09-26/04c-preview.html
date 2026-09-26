@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>04C — Dhani · Catatan & Proyek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: light; --ink:#242520; --muted:#777971; --line:#e9e9e3; --blue:#4467b0; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#fdfdfb; color:var(--ink); font-family:"DM Sans",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible { outline:2px solid var(--blue); outline-offset:6px; border-radius:3px; }
+    .preview-label { max-width:1120px; margin:0 auto; padding:22px 28px; display:flex; justify-content:space-between; color:#97998f; font-size:11px; letter-spacing:.015em; }
+    .preview-label span:last-child { color:#74776e; }
+    main { max-width:760px; margin:0 auto; padding:42px 20px 24px; }
+    .identity { display:flex; align-items:center; gap:14px; }
+    .portrait { width:56px; height:56px; border-radius:50%; overflow:hidden; background:#e5e5df; }
+    .portrait img { width:100%; height:100%; object-fit:cover; object-position:50% 34%; transform:scale(3.3); transform-origin:50% 34%; filter:grayscale(1); display:block; }
+    .name { font-size:19px; font-weight:600; letter-spacing:-.04em; }
+    .brand { display:block; margin-top:3px; font-size:13px; color:var(--muted); }
+    h1 { font-weight:550; font-size:clamp(36px,5vw,53px); line-height:1.1; letter-spacing:-.05em; margin:34px 0 18px; }
+    h1 span { display:block; }
+    h1 em { font-family:"Instrument Serif",Georgia,serif; font-weight:400; font-size:1.16em; letter-spacing:-.035em; }
+    h1 em b { font-weight:400; text-decoration:underline; text-decoration-color:#b2c3e3; text-underline-offset:7px; text-decoration-thickness:2px; }
+    .intro { max-width:565px; color:var(--muted); font-size:16px; line-height:1.65; margin:0; }
+    .profile-links { display:flex; flex-wrap:wrap; align-items:center; gap:25px; margin-top:24px; font-size:12px; color:#61655c; }
+    .profile-links a, .profile-links button { display:inline-flex; align-items:center; gap:7px; min-height:36px; }
+    .profile-links a:hover { color:var(--blue); }
+    .profile-links button { color:inherit; font:inherit; padding:0; border:0; background:none; }
+    .profile-links button:disabled { opacity:1; cursor:default; }
+    .icon { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    .content-section { margin-top:44px; }
+    .section-head { display:flex; align-items:baseline; gap:14px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+    h2 { margin:0; font-size:14px; font-weight:550; letter-spacing:-.015em; }
+    .section-head p { margin:0; color:#96998f; font-size:12px; }
+    .item { display:grid; grid-template-columns:minmax(0,1fr) 112px; gap:26px; align-items:center; padding:18px 0; border-bottom:1px solid var(--line); }
+    .item:last-child { border-bottom:0; }
+    .item h3 { font-size:17px; letter-spacing:-.025em; line-height:1.35; font-weight:550; margin:0 0 6px; }
+    .item p { color:var(--muted); font-size:13px; line-height:1.6; margin:0; max-width:440px; }
+    .arrow { display:inline-block; color:#a0a397; font-size:13px; margin-left:5px; font-weight:400; }
+    a.item:hover h3, a.item:hover .arrow { color:var(--blue); }
+    .thumb { width:112px; height:74px; border-radius:7px; overflow:hidden; border:1px solid #e6e7e0; background:#fff; display:grid; place-items:center; }
+    .thumb img { display:block; width:100%; height:100%; object-fit:contain; padding:4px; }
+    .flow { background:#eff3fa; }
+    .flow svg, .mobile svg { display:block; width:100%; height:100%; }
+    .mobile { background:#f0f3ed; }
+    .projects { margin-top:30px; }
+    .endnote { margin:28px 0 0; color:#a0a398; font-size:11px; }
+    .design-note { max-width:760px; margin:0 auto 24px; padding:18px 20px; font-size:11px; line-height:1.6; color:#93978b; }
+    @media (max-width:560px) {
+      .preview-label { padding:16px 22px; font-size:10px; }
+      main { padding:24px 24px 12px; }
+      h1 { margin-top:28px; font-size:clamp(30px,8.8vw,42px); }
+      .intro { font-size:14px; }
+      .profile-links { gap:22px; margin-top:18px; }
+      .content-section { margin-top:32px; }
+      .section-head { gap:10px; }
+      .section-head p { font-size:11px; }
+      .item { grid-template-columns:minmax(0,1fr) 88px; gap:14px; padding:17px 0; }
+      .item h3 { font-size:15px; }
+      .item p { font-size:12px; }
+      .thumb { width:88px; height:59px; }
+      .projects { margin-top:22px; }
+      .design-note { padding-inline:24px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="preview-label"><span>Eksplorasi desain / 04C</span><span>Preview untuk dipilih</span></div>
+  <main>
+    <header>
+      <div class="identity">
+        <div class="portrait"><img src="../../dist/assets/dhani-portrait.jpg" alt="Dhani tersenyum" width="1200" height="1600" /></div>
+        <div><div class="name">Dhani</div><span class="brand">DeepQA</span></div>
+      </div>
+      <h1><span>Menguji software.</span><span><em>Mengeksplorasi <b>AI.</b></em></span></h1>
+      <p class="intro">Saya bekerja di QA. Di sini saya berbagi catatan dan proyek dari eksplorasi AI dalam pekerjaan sehari-hari.</p>
+      <nav class="profile-links" aria-label="Profil dan kontak">
+        <a href="https://www.linkedin.com/in/rrdhani/" target="_blank" rel="noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7v.1M11.5 17v-7m0 3c0-4 5-4 5 0v4"/></svg>LinkedIn</a>
+        <button type="button" disabled title="Contoh tampilan. File CV belum ditentukan."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3H6a1 1 0 0 0-1 1v16h14V9l-6-6Zm0 0v6h6M12 11v6m-3-3 3 3 3-3"/></svg>Unduh CV</button>
+        <button type="button" disabled title="Contoh tampilan. Alamat email belum ditentukan."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email</button>
+      </nav>
+    </header>
+    <section class="content-section" aria-labelledby="notes-title">
+      <div class="section-head"><h2 id="notes-title">Catatan</h2><p>Hal yang saya pelajari</p></div>
+      <a class="item" href="../../dist/articles/claude-qa-workflow.html">
+        <div><h3>Claude untuk workflow QA <span class="arrow" aria-hidden="true">↗</span></h3><p>Memakai Claude untuk membantu membuat test case.</p></div>
+        <div class="thumb"><img src="../../dist/assets/claude-qa-workflow.jpg" alt="Diagram workflow QA dengan Claude" width="800" height="592" /></div>
+      </a>
+    </section>
+    <section class="content-section projects" aria-labelledby="projects-title">
+      <div class="section-head"><h2 id="projects-title">Proyek</h2><p>Eksperimen yang saya kerjakan</p></div>
+      <article class="item">
+        <div><h3>AI workflow</h3><p>Eksplorasi alur kerja QA dengan bantuan AI.</p></div>
+        <div class="thumb flow" role="img" aria-label="Ilustrasi tiga tahap alur kerja AI">
+          <svg viewBox="0 0 112 74" aria-hidden="true"><path d="M28 37h14m26 0h14" stroke="#a6b9d5" stroke-width="1.5"/><path d="m39 34 3 3-3 3m40-6 3 3-3 3" fill="none" stroke="#a6b9d5"/><rect x="8" y="25" width="22" height="24" rx="5" fill="white" stroke="#c7d4e7"/><path d="M14 32h10m-10 4h10m-10 4h6" stroke="#a2b3cc"/><rect x="44" y="25" width="24" height="24" rx="5" fill="#dce6f8" stroke="#a8bddd"/><path d="m56 30 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#5c7fb7"/><rect x="84" y="25" width="20" height="24" rx="5" fill="white" stroke="#c7d4e7"/><path d="m89 37 3 3 6-7" fill="none" stroke="#7899be" stroke-width="1.5"/></svg>
+        </div>
+      </article>
+      <article class="item">
+        <div><h3>Mobile automation test</h3><p>Eksplorasi pengujian otomatis untuk aplikasi mobile.</p></div>
+        <div class="thumb mobile" role="img" aria-label="Ilustrasi pengujian aplikasi pada ponsel">
+          <svg viewBox="0 0 112 74" aria-hidden="true"><rect x="35" y="9" width="31" height="56" rx="6" fill="white" stroke="#b9c5b1"/><path d="M45 14h11" stroke="#bcc7b5" stroke-linecap="round"/><rect x="40" y="22" width="21" height="12" rx="2" fill="#e6eddf"/><path d="M41 41h17m-17 6h13m-13 6h15" stroke="#d2dccb" stroke-width="2" stroke-linecap="round"/><circle cx="74" cy="47" r="11" fill="#dbe8d2" stroke="#b9cbae"/><path d="m69 47 3 3 7-7" fill="none" stroke="#638251" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </article>
+    </section>
+    <p class="endnote">Dhani / DeepQA</p>
+  </main>
+  <aside class="design-note">Catatan preview: isi dan ilustrasi proyek adalah contoh desain. Tautan CV dan Email belum diaktifkan.</aside>
+</body>
+</html>
