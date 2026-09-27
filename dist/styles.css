@@ -556,7 +556,7 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
 }
 .hero-portrait-wrap .hero-portrait {
   object-position: 50% 35%;
-  transform: scale(3);
+  transform: scale(4.2);
   transform-origin: 50% 35%;
 }
 .hero-name {
@@ -595,9 +595,11 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
 .profile-action {
   min-height: 2.6rem;
   font-size: 1rem;
+  font-weight: 400;
 }
 .profile-action-primary {
   padding: .65rem 1rem;
+  font-weight: 500;
 }
 .profile-action-primary.is-disabled {
   color: #fff;
@@ -615,11 +617,14 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   border-bottom: 0;
 }
 .portfolio-section-heading h2 {
-  font-size: 1rem;
+  font-size: 1.35rem;
+  font-weight: 400;
   letter-spacing: 0;
+  text-transform: none;
 }
 .portfolio-section-heading span {
   font-size: .95rem;
+  display: none;
 }
 .content-row {
   grid-template-columns: 176px minmax(0, 1fr) 112px;
@@ -629,15 +634,20 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
 }
 .content-row-label {
   font: 1rem Inter, Arial, sans-serif;
+  visibility: hidden;
 }
 .content-kicker {
   font-size: .7rem;
+  visibility: hidden;
 }
 .content-row h3 {
   font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 .content-row-copy > p:last-child {
   font-size: .95rem;
+  font-weight: 400;
 }
 .content-arrow {
   display: none;
