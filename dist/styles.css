@@ -710,11 +710,32 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   padding: 3.2rem 5rem 8rem;
   box-sizing: border-box;
 }
+.article-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
 .article-back {
   display: inline-block;
   color: var(--ink);
   font-size: 1.2rem;
   line-height: 1.3;
+}
+.article-share {
+  min-height: 2.75rem;
+  padding: .65rem 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  color: var(--ink);
+  background: #fff;
+  font: 500 .9rem Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+.article-share:hover,
+.article-share:focus-visible {
+  border-color: var(--ink);
+  background: #f6f6f4;
 }
 .article-hero {
   max-width: none;
@@ -737,8 +758,8 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   font-weight: 400;
 }
 .article-dek {
-  width: 1000px;
-  max-width: none;
+  width: 100%;
+  max-width: 1000px;
   margin: 4.2rem 0 0;
   color: var(--ink);
   font-size: 1.75rem;
@@ -751,8 +772,8 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
 }
 .journal-article .article-figure {
   margin: 0;
-  width: 1000px;
-  max-width: none;
+  width: 100%;
+  max-width: 1000px;
 }
 .journal-article .article-figure img {
   width: 100%;
@@ -762,28 +783,115 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   background: #fff;
 }
 .journal-article .article-copy {
-  width: 900px;
-  max-width: none;
+  width: 100%;
+  max-width: 760px;
   margin: 6.5rem 0 0;
+}
+.journal-article .article-copy h2 {
+  margin: 4rem 0 1.15rem;
+  color: var(--ink);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  font-weight: 500;
 }
 .journal-article .article-copy p {
   max-width: none;
   margin: 0 0 2.3rem;
   color: var(--ink);
-  font-size: 1.45rem;
-  line-height: 1.55;
+  font-size: 1.2rem;
+  line-height: 1.7;
   letter-spacing: 0;
 }
-.journal-article .article-copy .article-source {
-  margin-top: 4rem;
+.article-author {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  width: 100%;
+  max-width: 760px;
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dedede;
+}
+.article-author-photo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.article-author-photo img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  object-position: 50% 35%;
+  transform: scale(4.2);
+  transform-origin: 50% 35%;
+  filter: grayscale(1);
+}
+.article-author-label,
+.article-cta-label {
+  margin: 0 0 .5rem;
+  color: var(--muted);
+  font-size: .75rem;
+  line-height: 1.4;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.article-author h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+.article-author p:not(.article-author-label) {
+  margin: .55rem 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+.article-author .article-author-proof {
+  font-size: .8rem;
+}
+.article-cta {
+  width: 100%;
+  max-width: 760px;
+  margin-top: 5rem;
+  padding: 2.25rem;
+  border-radius: 1rem;
+  background: #f0f5f2;
+}
+.article-cta h2 {
+  margin: 0;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  font-weight: 500;
+}
+.article-cta > p:not(.article-cta-label) {
+  max-width: 38rem;
+  margin: 1rem 0 0;
   color: var(--muted);
   font-size: 1rem;
+  line-height: 1.6;
 }
-.journal-article .article-source a {
-  color: inherit;
+.article-cta > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 1.5rem;
+  padding: .65rem 1rem;
+  border-radius: 999px;
+  color: #fff;
+  background: #39785f;
+  font-size: .9rem;
+  font-weight: 500;
 }
-@media (min-width: 641px) {
-  .journal-article .article-hero h1 { white-space: nowrap; }
+.article-cta > a:hover,
+.article-cta > a:focus-visible {
+  background: #2f674f;
 }
 @media (max-width: 640px) {
   .journal-article .article-page {
@@ -791,6 +899,11 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
     padding: 2.5rem 0 5rem;
   }
   .article-back { font-size: 1rem; }
+  .article-share {
+    min-height: 2.5rem;
+    padding-inline: .8rem;
+    font-size: .78rem;
+  }
   .article-hero { margin-top: 3rem; }
   .article-eyebrow { font-size: .8rem; }
   .journal-article .article-hero h1 {
@@ -811,4 +924,22 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
     font-size: 1.08rem;
     line-height: 1.65;
   }
+  .journal-article .article-copy h2 {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+  }
+  .article-author {
+    grid-template-columns: 60px minmax(0, 1fr);
+    margin-top: 4rem;
+  }
+  .article-author-photo,
+  .article-author-photo img {
+    width: 60px;
+    height: 60px;
+  }
+  .article-cta {
+    margin-top: 4rem;
+    padding: 1.5rem;
+  }
+  .article-cta h2 { font-size: 1.55rem; }
 }

@@ -58,3 +58,12 @@ nav?.querySelectorAll('a').forEach((link) => {
     });
   });
 })();
+
+document.querySelectorAll('[data-share-linkedin]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const articleUrl = window.location.href.split('#')[0];
+    const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
+    const shareWindow = window.open(shareUrl, '_blank', 'noopener,noreferrer,width=720,height=720');
+    if (shareWindow) shareWindow.opener = null;
+  });
+});

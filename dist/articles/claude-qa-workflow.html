@@ -8,6 +8,7 @@
       name="description"
       content="A practical workflow for using Claude to create grounded QA test cases from product requirements."
     />
+    <meta name="source" content="https://lnkd.in/p/dnWsBRdJ" />
     <title>Claude untuk workflow QA — DeepQA</title>
     <link
       rel="icon"
@@ -24,7 +25,19 @@
   </head>
   <body class="journal-article">
     <main class="article-page" id="top">
-      <a class="article-back" href="../index.html#top">← Kembali ke Home</a>
+      <div class="article-topbar">
+        <a class="article-back" href="../index.html#top">← Kembali ke Home</a>
+        <button
+          class="article-share"
+          type="button"
+          data-share-linkedin
+          data-track="article-share"
+          data-track-content="linkedin"
+          aria-label="Bagikan catatan ini di LinkedIn"
+        >
+          Bagikan di LinkedIn ↗
+        </button>
+      </div>
       <header class="article-hero">
         <p class="article-eyebrow">CATATAN / QA× AI</p>
         <h1>Claude untuk workflow QA</h1>
@@ -49,19 +62,37 @@
         <div class="article-copy">
           <p>Beberapa bulan terakhir saya mulai pakai Claude untuk membuat test case, dan ternyata cukup membantu untuk pekerjaan QA sehari-hari.</p>
 
+          <h2>Mengumpulkan sumber acuan</h2>
           <p>Prosesnya dimulai dengan mengumpulkan semua source of truth requirement — bisa dari deskripsi tiket Jira, comment di tiket, PRD, sampai percakapan Slack. Saya pakai MCP agar Claude bisa langsung akses sumber-sumber itu tanpa copy-paste manual satu-satu. Saya beri instruksi agar Claude benar-benar membaca baris demi baris agar tidak ada requirement yang tertinggal. Kalau ada Figma, saya juga share screenshot-nya sebagai referensi visual.</p>
 
+          <h2>Menemukan discrepancy lebih awal</h2>
           <p>Setelah semua source of truth terkumpul, selanjutnya Claude saya minta untuk menemukan discrepancy dari masing-masing requirement. Ini penting agar kita bisa segera konfirmasi ke tim Product ataupun Tech sebelum fitur selesai dibuat dan proses testing dimulai. Karena discrepancy requirement akan menjadi potensi bug di kemudian hari.</p>
 
+          <h2>Menyusun test case dengan ground truth</h2>
           <p>Dari semua sumber itu, Claude breakdown menjadi test case dengan format spesifik yang ditentukan — termasuk dengan Ground Truth di tiap scenario. Ini penting untuk mengurangi tingkat halusinasi dari AI. Output-nya langsung jadi file Excel dan siap untuk di-review sebelum masuk ke Test Repository.</p>
 
+          <h2>Membuat workflow yang dapat dipakai ulang</h2>
           <p>Terakhir, semua flow di atas saya rangkum menjadi markdown file berupa CLAUDE.md untuk claude-code, ataupun di section instruksi untuk Claude Desktop. Agar di kemudian hari kita bisa memakai workflow yang sama ketika membuat test case.</p>
-
-          <p>Apakah ada teman-teman yang memakai workflow seperti ini juga? Atau malah ada yang memakai workflow lain yang lebih oke?</p>
-
-          <p class="article-source"><a href="https://lnkd.in/p/dnWsBRdJ" rel="noreferrer">Baca versi asli di LinkedIn ↗</a></p>
-
         </div>
+
+        <aside class="article-author" aria-label="Tentang penulis">
+          <span class="article-author-photo" aria-hidden="true">
+            <img src="../assets/dhani-portrait.jpg" alt="" width="1200" height="1600" loading="lazy" />
+          </span>
+          <div>
+            <p class="article-author-label">Ditulis oleh</p>
+            <h2>Dhani</h2>
+            <p>Quality Assurance yang menggabungkan fundamental QA, automation, dan AI untuk meningkatkan produktivitas testing.</p>
+            <p class="article-author-proof">Verint · Tokopedia · Sorabel · Populix</p>
+          </div>
+        </aside>
+
+        <section class="article-cta" aria-labelledby="article-cta-title">
+          <p class="article-cta-label">QA × Automation × AI</p>
+          <h2 id="article-cta-title">Ingin menerapkan workflow serupa?</h2>
+          <p>Saya sedang merapikan workflow ini menjadi template dan report praktis. Lihat profil saya untuk berdiskusi atau meminta preview.</p>
+          <a href="../index.html#top" data-track="article-cta" data-track-content="profile">Lihat profil &amp; kontak →</a>
+        </section>
       </article>
     </main>
 
