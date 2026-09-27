@@ -610,10 +610,16 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   font-size: .95rem;
 }
 .portfolio-section {
-  padding: 1.5rem 0 2.25rem;
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  column-gap: 1rem;
+  align-items: start;
+  padding: 1.5rem 0 3.25rem;
 }
 .portfolio-section-heading {
-  padding-bottom: .7rem;
+  display: block;
+  grid-column: 1;
+  padding: 1.1rem 0 0;
   border-bottom: 0;
 }
 .portfolio-section-heading h2 {
@@ -626,19 +632,23 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   font-size: .95rem;
   display: none;
 }
+.portfolio-projects .portfolio-section-heading { padding-top: 1.8rem; }
+.portfolio-projects .content-row { padding-block: 1.8rem; }
+.content-list {
+  grid-column: 2;
+  min-width: 0;
+}
 .content-row {
-  grid-template-columns: 176px minmax(0, 1fr) 112px;
+  grid-template-columns: minmax(0, 1fr) 112px;
   gap: 1rem;
   padding: .95rem 0;
   border-bottom: 0;
 }
 .content-row-label {
-  font: 1rem Inter, Arial, sans-serif;
-  visibility: hidden;
+  display: none;
 }
 .content-kicker {
-  font-size: .7rem;
-  visibility: hidden;
+  display: none;
 }
 .content-row h3 {
   font-size: 1.35rem;
@@ -658,6 +668,13 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   padding-bottom: 6rem;
 }
 @media (max-width: 640px) {
+  .portfolio-section {
+    display: block;
+    padding-block: 1.5rem 2.25rem;
+  }
+  .portfolio-section-heading,
+  .portfolio-projects .portfolio-section-heading { padding-top: 0; }
+  .portfolio-projects .content-row { padding-block: 1.1rem; }
   .portfolio-hero { padding-block: 4rem 2.5rem; }
   .hero-identity { margin-bottom: 2.5rem; }
   .hero-portrait-wrap { flex-basis: 72px; width: 72px; height: 72px; }
@@ -669,7 +686,7 @@ a.content-row:hover, a.content-row:focus-visible { color: var(--blue); }
   .hero-proof { font-size: .7rem; }
   .portfolio-section-heading span { font-size: .7rem; }
   .content-row {
-    grid-template-columns: 1.5rem minmax(0, 1fr) 88px;
+    grid-template-columns: minmax(0, 1fr) 88px;
     gap: .65rem;
   }
   .content-row h3 { font-size: 1.05rem; }
