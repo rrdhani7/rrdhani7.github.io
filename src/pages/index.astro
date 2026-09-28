@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteIntro from '../components/SiteIntro.astro';
+import SiteNav from '../components/SiteNav.astro';
+import WorkList from '../components/WorkList.astro';
+import ExplorationGrid from '../components/ExplorationGrid.astro';
+import AboutPanel from '../components/AboutPanel.astro';
+
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const explorations = (await getCollection('explorations', ({ data }) => data.published)).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Dhani — QA Engineer" description="Dhani — QA Engineer yang bekerja dengan QA fundamentals, automation, dan AI.">
+  <main class="shell" id="top">
+    <SiteIntro />
+    <SiteNav />
+    <WorkList entries={work} />
+    <ExplorationGrid entries={explorations} />
+    <AboutPanel />
+  </main>
+  <script>import '../scripts/home.js';</script>
+</BaseLayout>

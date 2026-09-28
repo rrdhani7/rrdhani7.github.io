@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content';
+import DetailLayout from '../../layouts/DetailLayout.astro';
+import { sitePath } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('explorations', ({ data }) => data.published);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<DetailLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  sourceUrl={entry.data.sourceUrl}
+  backLabel="Explorations"
+  backHref="index.html?section=explorations"
+  kicker={`EXPLORATIONS / ${entry.data.type}`}
+  headline={entry.data.title}
+  dek={entry.data.dek}
+  ctaTitle={entry.data.ctaTitle}
+  ctaBody={entry.data.ctaBody}
+  ctaLabel={entry.data.ctaLabel}
+  ctaHref={entry.data.ctaHref}
+>
+  <figure class="detail-figure">
+    <img src={sitePath(entry.data.image)} alt={entry.data.imageAlt} width="800" height="592" />
+    <figcaption>{entry.data.imageCaption}</figcaption>
+  </figure>
+  <Content />
+  <Fragment slot="footer">
+    {entry.data.sourceUrl ? <a href={entry.data.sourceUrl} target="_blank" rel="noreferrer">Tulisan asli di LinkedIn ↗</a> : <span>Dhani · QA Engineer</span>}
+    <button class="detail-share" type="button" data-share-linkedin>Bagikan di LinkedIn ↗</button>
+  </Fragment>
+  <script>import '../../scripts/share.js';</script>
+</DetailLayout>

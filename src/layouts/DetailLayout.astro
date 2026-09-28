@@ -1,0 +1,49 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { sitePath } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  backLabel: string;
+  backHref: string;
+  kicker: string;
+  headline: string;
+  dek: string;
+  ctaTitle: string;
+  ctaBody?: string;
+  ctaLabel: string;
+  ctaHref: string;
+  footerHref?: string;
+  footerLabel?: string;
+  sourceUrl?: string;
+}
+
+const {
+  title, description, backLabel, backHref, kicker, headline, dek,
+  ctaTitle, ctaBody, ctaLabel, ctaHref, footerHref, footerLabel, sourceUrl,
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} — Dhani`} description={description} sourceUrl={sourceUrl}>
+  <main class="detail-page">
+    <a class="detail-back" href={sitePath(backHref)}>← {backLabel}</a>
+    <header class="detail-header">
+      <p class="detail-kicker">{kicker}</p>
+      <h1>{headline}</h1>
+      <p class="detail-dek">{dek}</p>
+    </header>
+    <article class="detail-body"><slot /></article>
+    <aside class="detail-next" aria-label="Langkah berikutnya">
+      <p>{ctaTitle}</p>
+      {ctaBody && <p>{ctaBody}</p>}
+      <a href={sitePath(ctaHref)}>{ctaLabel}</a>
+    </aside>
+    <footer class="detail-footer">
+      <slot name="footer">
+        <span>Dhani · QA Engineer</span>
+        <a href={sitePath(footerHref ?? 'index.html?section=about')}>{footerLabel ?? 'Profil & kontak ↗'}</a>
+      </slot>
+    </footer>
+  </main>
+</BaseLayout>

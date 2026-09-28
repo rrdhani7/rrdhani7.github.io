@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import DetailLayout from '../../layouts/DetailLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work', ({ data }) => data.published);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<DetailLayout
+  title={entry.data.listTitle}
+  description={entry.data.description ?? entry.data.dek ?? entry.data.listTitle}
+  backLabel="Work"
+  backHref="index.html?section=work"
+  kicker={`WORK / ${entry.data.company.toUpperCase()}`}
+  headline={entry.data.headline ?? entry.data.listTitle}
+  dek={entry.data.dek ?? entry.data.subtitle}
+  ctaTitle={entry.data.ctaTitle ?? 'Baca selanjutnya'}
+  ctaLabel={entry.data.ctaLabel ?? 'Lihat profil & kontak ↗'}
+  ctaHref={entry.data.ctaHref ?? 'index.html?section=about'}
+  footerHref={entry.id === 'tokopedia-marketplace' ? 'index.html?section=work' : 'index.html?section=about'}
+  footerLabel={entry.id === 'tokopedia-marketplace' ? 'Kembali ke Work ↗' : 'Profil & kontak ↗'}
+>
+  <Content />
+</DetailLayout>

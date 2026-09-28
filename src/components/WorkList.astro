@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { sitePath } from '../lib/site';
+
+interface Props {
+  entries: CollectionEntry<'work'>[];
+}
+
+const { entries } = Astro.props;
+---
+
+<section class="view work-view" data-panel="work" aria-label="Work">
+  <div class="work-list">
+    {entries.map((entry) => entry.data.published ? (
+      <a
+        class="work-item work-link"
+        href={sitePath(`work/${entry.id}.html`)}
+        data-preview-company={entry.data.company}
+        data-preview-focus={entry.data.previewFocus}
+        data-preview-bg={entry.data.previewBg}
+        data-preview-fg={entry.data.previewFg}
+      >
+        <span>{entry.data.listTitle} <span class="work-arrow" aria-hidden="true">↗</span></span>
+        <span class="work-meta">{entry.data.subtitle}</span>
+      </a>
+    ) : (
+      <div
+        class="work-item"
+        data-preview-company={entry.data.company}
+        data-preview-focus={entry.data.previewFocus}
+        data-preview-bg={entry.data.previewBg}
+        data-preview-fg={entry.data.previewFg}
+      >
+        <span>{entry.data.listTitle}</span>
+        <span class="work-meta">{entry.data.subtitle}</span>
+      </div>
+    ))}
+  </div>
+  <aside class="hover-preview" hidden aria-live="polite">
+    <div class="preview-art"><span class="preview-label">SELECTED WORK</span><strong class="preview-company">Populix</strong><span class="preview-focus">AI-driven testing</span></div>
+  </aside>
+</section>

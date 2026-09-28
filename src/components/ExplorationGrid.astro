@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { sitePath } from '../lib/site';
+
+interface Props {
+  entries: CollectionEntry<'explorations'>[];
+}
+
+const { entries } = Astro.props;
+---
+
+<section class="view explorations-view" data-panel="explorations" aria-label="Explorations" hidden>
+  <div class="exploration-grid">
+    {entries.map((entry) => (
+      <a class="exploration-card" href={sitePath(`explorations/${entry.id}.html`)}>
+        <span class="exploration-image"><img src={sitePath(entry.data.image)} alt={entry.data.imageAlt} width="800" height="592" loading="lazy" /></span>
+        <span class="exploration-title">{entry.data.listTitle}</span>
+        <span class="exploration-meta">{entry.data.listMeta}</span>
+      </a>
+    ))}
+  </div>
+</section>
