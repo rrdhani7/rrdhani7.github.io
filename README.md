@@ -22,6 +22,19 @@ pnpm test    # build lalu cek halaman dan tautan
 pnpm build   # hasil statis di dist/
 ```
 
+## Deploy ke GitHub Pages
+
+Workflow `.github/workflows/deploy-pages.yml` akan membangun dan menerbitkan situs
+setiap kali ada push ke branch `main`.
+
+1. Push repository ini ke GitHub.
+2. Buka `Settings → Pages` di repository tersebut.
+3. Pada `Build and deployment`, pilih `GitHub Actions`.
+4. Push perubahan ke `main`, atau jalankan workflow secara manual dari tab `Actions`.
+
+Workflow membaca path repository dari GitHub Pages. Karena itu, tautan dan aset
+tetap bekerja pada repository project maupun repository user-site.
+
 ## Mengelola konten
 
 - `src/content/work/`: satu berkas Markdown per pengalaman. Urutkan dengan `order`.
