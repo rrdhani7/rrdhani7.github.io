@@ -7,7 +7,10 @@ const output = resolve(root, 'dist');
 const pages = [
   'index.html',
   'work/populix-research-products.html',
+  'work/happyfresh-delivery-experience.html',
+  'work/sorabel-commerce-journeys.html',
   'work/tokopedia-marketplace.html',
+  'work/verint-enterprise-products.html',
   'explorations/claude-qa-workflow.html',
   'notes/claude-qa-workflow.html',
 ];
@@ -34,7 +37,7 @@ assert.match(home, /Saya menggabungkan fondasi QA, automation, dan AI/);
 assert.match(home, /work\/populix-research-products\.html/);
 assert.match(home, /work\/tokopedia-marketplace\.html/);
 assert.match(home, /explorations\/claude-qa-workflow\.html/);
-assert.doesNotMatch(home, /work\/sorabel-commerce-journeys\.html/);
+assert.match(home, /work\/sorabel-commerce-journeys\.html/);
 assert.doesNotMatch(home, /CV dan email menyusul|8×/);
 assert.match(note, /Menyusun test case dengan ground truth/);
 assert.match(note, /Ingin menerapkan workflow serupa/);

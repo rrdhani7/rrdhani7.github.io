@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import DetailLayout from '../../layouts/DetailLayout.astro';
+import { sitePath } from '../../lib/site';
 
 export async function getStaticPaths() {
   const entries = await getCollection('work', ({ data }) => data.published);
@@ -16,7 +17,7 @@ const { Content } = await render(entry);
   description={entry.data.description ?? entry.data.dek ?? entry.data.listTitle}
   backLabel="Work"
   backHref="index.html?section=work"
-  kicker={`WORK / ${entry.data.company.toUpperCase()}`}
+  kicker={`WORK / ${entry.data.company.toUpperCase()}${entry.data.year ? ` · ${entry.data.year}` : ''}`}
   headline={entry.data.headline ?? entry.data.listTitle}
   dek={entry.data.dek ?? entry.data.subtitle}
   ctaTitle={entry.data.ctaTitle ?? 'Baca selanjutnya'}
@@ -25,5 +26,11 @@ const { Content } = await render(entry);
   footerHref={entry.id === 'tokopedia-marketplace' ? 'index.html?section=work' : 'index.html?section=about'}
   footerLabel={entry.id === 'tokopedia-marketplace' ? 'Kembali ke Work ↗' : 'Profil & kontak ↗'}
 >
+  {entry.data.image && (
+    <figure class="detail-figure">
+      <img src={sitePath(entry.data.image)} alt={entry.data.imageAlt ?? ''} width="608" height="300" />
+      {entry.data.imageCaption && <figcaption>{entry.data.imageCaption}</figcaption>}
+    </figure>
+  )}
   <Content />
 </DetailLayout>

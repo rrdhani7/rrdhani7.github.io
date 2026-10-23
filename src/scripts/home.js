@@ -39,6 +39,13 @@ function showPreview(item) {
   preview.style.setProperty("--preview-fg", item.dataset.previewFg);
   preview.querySelector(".preview-company").textContent = item.dataset.previewCompany;
   preview.querySelector(".preview-focus").textContent = item.dataset.previewFocus;
+  const image = preview.querySelector(".preview-image");
+  if (item.dataset.previewImage) {
+    if (image.getAttribute("src") !== item.dataset.previewImage) image.src = item.dataset.previewImage;
+    image.hidden = false;
+  } else {
+    image.hidden = true;
+  }
   preview.hidden = false;
   requestAnimationFrame(() => preview.classList.add("is-visible"));
 }

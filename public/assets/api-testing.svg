@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 300" role="img" aria-labelledby="t d">
+  <title id="t">Cara kerja API testing</title>
+  <desc id="d">Test script mengirim request ke API, menerima response, lalu memeriksa status, skema, dan data secara otomatis.</desc>
+  <style>
+    text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #2b4539; }
+    .lbl { font-size: 12px; font-weight: 500; }
+    .sub { font-size: 10px; opacity: .6; }
+    .box { fill: #fff; stroke: #c3d3bf; stroke-width: 1.5; }
+    .row { fill: #f1f6ef; }
+    .hub { fill: #2b4539; }
+    .hub-t { fill: #fff; font-size: 13px; font-weight: 500; }
+    .line { stroke: #c3d3bf; stroke-width: 1.5; stroke-dasharray: 3 4; }
+    .hit { fill: none; stroke: #2f8f5b; stroke-width: 2; opacity: 0; animation: hit 6s infinite; }
+    .ck { opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .tick { fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .rq { fill: #2b4539; opacity: 0; animation: req 6s infinite; }
+    .rs { fill: #2f8f5b; opacity: 0; animation: res 6s infinite; }
+    .c1 { animation: ck1 6s infinite; }
+    .c2 { animation: ck2 6s infinite; }
+    .c3 { animation: ck3 6s infinite; }
+    @keyframes req { 0%, 8% { transform: translateX(0); opacity: 0 } 11% { opacity: 1 } 24% { transform: translateX(136px); opacity: 1 } 26%, 100% { transform: translateX(136px); opacity: 0 } }
+    @keyframes res { 0%, 30% { transform: translateX(0); opacity: 0 } 33% { opacity: 1 } 46% { transform: translateX(-136px); opacity: 1 } 48%, 100% { transform: translateX(-136px); opacity: 0 } }
+    @keyframes hit { 0%, 24% { opacity: 0 } 27%, 33% { opacity: 1 } 37%, 100% { opacity: 0 } }
+    @keyframes ck1 { 0%, 50% { opacity: 0; transform: scale(.4) } 54%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @keyframes ck2 { 0%, 56% { opacity: 0; transform: scale(.4) } 60%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @keyframes ck3 { 0%, 62% { opacity: 0; transform: scale(.4) } 66%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @media (prefers-reduced-motion: reduce) {
+      .rq, .rs, .hit, .ck { animation: none; }
+      .ck { opacity: 1; }
+    }
+  </style>
+
+  <rect x="24" y="64" width="212" height="172" rx="10" class="box"/>
+  <text x="44" y="96" class="lbl">API test</text>
+  <text x="212" y="96" text-anchor="end" class="sub">otomatis</text>
+  <rect x="44" y="118" width="172" height="30" rx="6" class="row"/>
+  <text x="58" y="137" class="lbl">Status 200</text>
+  <g class="ck c1"><circle cx="196" cy="133" r="9" fill="#3f7d6b"/><path d="M191.5 133.5 L195 137 L201 129" class="tick"/></g>
+  <rect x="44" y="158" width="172" height="30" rx="6" class="row"/>
+  <text x="58" y="177" class="lbl">Skema response</text>
+  <g class="ck c2"><circle cx="196" cy="173" r="9" fill="#3f7d6b"/><path d="M191.5 173.5 L195 177 L201 169" class="tick"/></g>
+  <rect x="44" y="198" width="172" height="30" rx="6" class="row"/>
+  <text x="58" y="217" class="lbl">Data sesuai</text>
+  <g class="ck c3"><circle cx="196" cy="213" r="9" fill="#3f7d6b"/><path d="M191.5 213.5 L195 217 L201 209" class="tick"/></g>
+
+  <rect x="372" y="104" width="212" height="92" rx="10" class="hub"/>
+  <rect x="372" y="104" width="212" height="92" rx="10" class="hit"/>
+  <text x="478" y="146" text-anchor="middle" class="hub-t">API</text>
+  <text x="478" y="166" text-anchor="middle" class="hub-t" style="font-size:10px;opacity:.7">layanan backend</text>
+
+  <line x1="236" y1="132" x2="372" y2="132" class="line"/>
+  <line x1="236" y1="170" x2="372" y2="170" class="line"/>
+  <text x="304" y="122" text-anchor="middle" class="sub">Request</text>
+  <text x="304" y="190" text-anchor="middle" class="sub">Response</text>
+  <circle cx="236" cy="132" r="5" class="rq"/>
+  <circle cx="372" cy="170" r="5" class="rs"/>
+
+  <text x="24" y="284" class="sub">Setiap request dicek otomatis: status, skema, dan data response.</text>
+</svg>

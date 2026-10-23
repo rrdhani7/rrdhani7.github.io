@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 300" role="img" aria-labelledby="t d">
+  <title id="t">Load testing checkout saat flash sale</title>
+  <desc id="d">Traffic naik tajam saat flash sale mulai, sementara waktu respons checkout tetap di bawah batas aman.</desc>
+  <style>
+    text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #20452c; }
+    .lbl { font-size: 12px; font-weight: 500; }
+    .sub { font-size: 10px; opacity: .6; }
+    .box { fill: #fff; stroke: #bcd0b5; stroke-width: 1.5; }
+    .axis { stroke: #cddac7; stroke-width: 1.2; }
+    .thr { stroke: #7fa58c; stroke-width: 1.2; stroke-dasharray: 4 4; }
+    .mark { stroke: #9bb59f; stroke-width: 1.2; stroke-dasharray: 2 4; opacity: 0; animation: mark 6s infinite; }
+    .mark-t { font-size: 10px; opacity: 0; animation: mark 6s infinite; }
+    .traffic, .resp { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; }
+    .traffic { stroke: #c2603a; animation: draw 6s infinite; }
+    .resp { stroke: #20452c; animation: draw 6s infinite; }
+    .pill { fill: #dcefe3; }
+    .pill-d { fill: #2f8f5b; transform-box: fill-box; transform-origin: center; animation: pulse 1.4s ease-in-out infinite; }
+    .ok { font-size: 11px; font-weight: 500; fill: #1f6b42; }
+    .stream { opacity: 0; animation: stream 6s infinite; }
+    .u { fill: #c2603a; animation: flow .9s linear infinite; }
+    .u2 { animation-delay: .3s; }
+    .u3 { animation-delay: .6s; }
+    @keyframes draw { 0% { stroke-dashoffset: 100; opacity: 1 } 62%, 92% { stroke-dashoffset: 0; opacity: 1 } 97%, 100% { stroke-dashoffset: 0; opacity: 0 } }
+    @keyframes mark { 0%, 36% { opacity: 0 } 40%, 92% { opacity: .9 } 97%, 100% { opacity: 0 } }
+    @keyframes stream { 0%, 36% { opacity: 0 } 42%, 92% { opacity: 1 } 97%, 100% { opacity: 0 } }
+    @keyframes flow { 0% { transform: translateX(0); opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } 100% { transform: translateX(34px); opacity: 0 } }
+    @keyframes pulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.5) } }
+    @media (prefers-reduced-motion: reduce) {
+      .traffic, .resp { animation: none; stroke-dashoffset: 0; }
+      .mark, .mark-t, .stream { animation: none; opacity: .9; }
+      .u, .pill-d { animation: none; }
+    }
+  </style>
+
+  <text x="40" y="34" class="lbl">Traffic</text>
+  <line x1="40" y1="120" x2="372" y2="120" class="axis"/>
+  <path class="traffic" pathLength="100" d="M40 114 L130 112 L210 108 L236 104 C246 74 252 56 270 52 L322 48 L372 46"/>
+
+  <text x="40" y="142" class="lbl">Waktu respons checkout</text>
+  <line x1="40" y1="232" x2="372" y2="232" class="axis"/>
+  <line x1="40" y1="166" x2="372" y2="166" class="thr"/>
+  <text x="372" y="160" text-anchor="end" class="sub">batas aman</text>
+  <path class="resp" pathLength="100" d="M40 214 L130 212 L210 210 L236 208 C246 198 254 192 268 192 L322 196 L372 198"/>
+
+  <line x1="240" y1="40" x2="240" y2="232" class="mark"/>
+  <text x="246" y="250" class="mark-t">Flash sale mulai</text>
+
+  <rect x="432" y="76" width="152" height="120" rx="8" class="box"/>
+  <text x="448" y="100" class="lbl">Checkout</text>
+  <rect x="448" y="112" width="76" height="24" rx="12" class="pill"/>
+  <circle cx="462" cy="124" r="4" class="pill-d"/>
+  <text x="472" y="128" class="ok">Aman</text>
+  <text x="448" y="164" class="sub">Menahan jutaan request</text>
+  <text x="448" y="180" class="sub">tanpa melambat</text>
+
+  <g class="stream">
+    <circle cx="392" cy="100" r="3" class="u"/>
+    <circle cx="392" cy="100" r="3" class="u u2"/>
+    <circle cx="392" cy="136" r="3" class="u u3"/>
+    <circle cx="392" cy="136" r="3" class="u"/>
+    <circle cx="392" cy="136" r="3" class="u u2"/>
+    <circle cx="392" cy="172" r="3" class="u u2"/>
+    <circle cx="392" cy="172" r="3" class="u u3"/>
+  </g>
+
+  <text x="40" y="284" class="sub">Beban naik drastis saat flash sale, waktu respons checkout tetap di bawah batas.</text>
+</svg>

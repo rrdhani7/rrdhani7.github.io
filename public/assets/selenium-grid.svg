@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 300" role="img" aria-labelledby="t d">
+  <title id="t">Cara kerja Selenium Grid</title>
+  <desc id="d">Test suite mengirim test ke hub. Hub membagi test ke tiga node browser yang menjalankannya bersamaan.</desc>
+  <style>
+    text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #284057; }
+    .lbl { font-size: 12px; font-weight: 500; }
+    .sub { font-size: 10px; opacity: .6; }
+    .box { fill: #fff; stroke: #b9c7d3; stroke-width: 1.5; }
+    .hub { fill: #284057; }
+    .hub-t { fill: #fff; font-size: 13px; font-weight: 500; }
+    .line { stroke: #b9c7d3; stroke-width: 1.5; stroke-dasharray: 3 4; fill: none; }
+    .track { fill: #e5ebf0; }
+    .bar { fill: #3f7d6b; transform-box: fill-box; transform-origin: left center; transform: scaleX(0); }
+    .dot { fill: #284057; opacity: 0; }
+    .ok { fill: #3f7d6b; font-size: 11px; font-weight: 500; opacity: 0; }
+    .a { animation: toHub 5s infinite; }
+    .a2 { animation-delay: .15s; }
+    .a3 { animation-delay: .3s; }
+    .n1 { animation: toN1 5s infinite; }
+    .n2 { animation: toN2 5s infinite; }
+    .n3 { animation: toN3 5s infinite; }
+    .b1 { animation: fill1 5s infinite; }
+    .b2 { animation: fill2 5s infinite; }
+    .b3 { animation: fill3 5s infinite; }
+    .k1 { animation: done1 5s infinite; }
+    .k2 { animation: done2 5s infinite; }
+    .k3 { animation: done3 5s infinite; }
+    @keyframes toHub { 0% { transform: translate(0,0); opacity: 0 } 4% { opacity: 1 } 20% { transform: translate(92px,0); opacity: 1 } 23%, 100% { transform: translate(92px,0); opacity: 0 } }
+    @keyframes toN1 { 0%, 26% { transform: translate(0,0); opacity: 0 } 28% { opacity: 1 } 42% { transform: translate(100px,-82px); opacity: 1 } 45%, 100% { transform: translate(100px,-82px); opacity: 0 } }
+    @keyframes toN2 { 0%, 26% { transform: translate(0,0); opacity: 0 } 28% { opacity: 1 } 42% { transform: translate(100px,0); opacity: 1 } 45%, 100% { transform: translate(100px,0); opacity: 0 } }
+    @keyframes toN3 { 0%, 26% { transform: translate(0,0); opacity: 0 } 28% { opacity: 1 } 42% { transform: translate(100px,82px); opacity: 1 } 45%, 100% { transform: translate(100px,82px); opacity: 0 } }
+    @keyframes fill1 { 0%, 44% { transform: scaleX(0) } 78%, 94% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+    @keyframes fill2 { 0%, 44% { transform: scaleX(0) } 88%, 94% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+    @keyframes fill3 { 0%, 44% { transform: scaleX(0) } 83%, 94% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+    @keyframes done1 { 0%, 78% { opacity: 0 } 82%, 94% { opacity: 1 } 98%, 100% { opacity: 0 } }
+    @keyframes done2 { 0%, 88% { opacity: 0 } 91%, 94% { opacity: 1 } 98%, 100% { opacity: 0 } }
+    @keyframes done3 { 0%, 83% { opacity: 0 } 86%, 94% { opacity: 1 } 98%, 100% { opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .a, .n1, .n2, .n3, .b1, .b2, .b3, .k1, .k2, .k3 { animation: none; }
+      .bar { transform: scaleX(1); }
+      .ok { opacity: 1; }
+    }
+  </style>
+
+  <rect x="24" y="108" width="108" height="84" rx="8" class="box"/>
+  <text x="78" y="130" text-anchor="middle" class="lbl">Test suite</text>
+  <rect x="42" y="142" width="72" height="9" rx="4.5" class="track"/>
+  <rect x="42" y="157" width="72" height="9" rx="4.5" class="track"/>
+  <rect x="42" y="172" width="72" height="9" rx="4.5" class="track"/>
+
+  <rect x="224" y="118" width="88" height="64" rx="8" class="hub"/>
+  <text x="268" y="146" text-anchor="middle" class="hub-t">Hub</text>
+  <text x="268" y="164" text-anchor="middle" class="hub-t" style="font-size:10px;opacity:.7">Selenium Grid</text>
+
+  <path class="line" d="M132 150 H224"/>
+  <path class="line" d="M312 150 C352 150 352 68 412 68"/>
+  <path class="line" d="M312 150 H412"/>
+  <path class="line" d="M312 150 C352 150 352 232 412 232"/>
+
+  <g>
+    <rect x="412" y="38" width="172" height="60" rx="8" class="box"/>
+    <text x="428" y="60" class="lbl">Node 1 · Chrome</text>
+    <rect x="428" y="72" width="140" height="8" rx="4" class="track"/>
+    <rect x="428" y="72" width="140" height="8" rx="4" class="bar b1"/>
+    <text x="568" y="60" text-anchor="end" class="ok k1">selesai</text>
+  </g>
+  <g>
+    <rect x="412" y="120" width="172" height="60" rx="8" class="box"/>
+    <text x="428" y="142" class="lbl">Node 2 · Firefox</text>
+    <rect x="428" y="154" width="140" height="8" rx="4" class="track"/>
+    <rect x="428" y="154" width="140" height="8" rx="4" class="bar b2"/>
+    <text x="568" y="142" text-anchor="end" class="ok k2">selesai</text>
+  </g>
+  <g>
+    <rect x="412" y="202" width="172" height="60" rx="8" class="box"/>
+    <text x="428" y="224" class="lbl">Node 3 · Edge</text>
+    <rect x="428" y="236" width="140" height="8" rx="4" class="track"/>
+    <rect x="428" y="236" width="140" height="8" rx="4" class="bar b3"/>
+    <text x="568" y="224" text-anchor="end" class="ok k3">selesai</text>
+  </g>
+
+  <circle cx="132" cy="150" r="5" class="dot a"/>
+  <circle cx="132" cy="150" r="5" class="dot a a2"/>
+  <circle cx="132" cy="150" r="5" class="dot a a3"/>
+  <circle cx="312" cy="150" r="5" class="dot n1"/>
+  <circle cx="312" cy="150" r="5" class="dot n2"/>
+  <circle cx="312" cy="150" r="5" class="dot n3"/>
+
+  <text x="24" y="284" class="sub">Tiga test berjalan bersamaan di tiga browser, bukan satu per satu.</text>
+</svg>

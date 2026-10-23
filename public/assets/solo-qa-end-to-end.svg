@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 300" role="img" aria-labelledby="t d">
+  <title id="t">Satu QA menjalankan proses end to end</title>
+  <desc id="d">Satu QA bergerak melewati black box testing, manual testing, automation test, dan CI/CD pipeline.</desc>
+  <style>
+    text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #573a37; }
+    .lbl { font-size: 12.5px; font-weight: 500; }
+    .sub { font-size: 10px; opacity: .6; }
+    .box { fill: #fff; stroke: #dccbc4; stroke-width: 1.5; }
+    .on { fill: #f6ebe6; stroke: #573a37; stroke-width: 1.5; opacity: 0; }
+    .ck { opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .tick { fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .track { stroke: #dccbc4; stroke-width: 1.5; stroke-dasharray: 3 4; }
+    .tok { animation: move 8s infinite; }
+    .tok-c { fill: #573a37; }
+    .tok-t { fill: #fff; font-size: 11px; font-weight: 600; }
+    .s1 { animation: on1 8s infinite; }
+    .s1c { animation: ck1 8s infinite; }
+    .s2 { animation: on2 8s infinite; }
+    .s2c { animation: ck2 8s infinite; }
+    .s3 { animation: on3 8s infinite; }
+    .s3c { animation: ck3 8s infinite; }
+    .s4 { animation: on4 8s infinite; }
+    .s4c { animation: ck4 8s infinite; }
+    @keyframes move {
+      0%, 24% { transform: translateX(0); opacity: 1 }
+      28%, 49% { transform: translateX(146px) }
+      53%, 74% { transform: translateX(292px) }
+      78%, 93% { transform: translateX(438px); opacity: 1 }
+      97%, 100% { transform: translateX(438px); opacity: 0 }
+    }
+    @keyframes on1 { 0%, 2% { opacity: 0 } 5%, 93% { opacity: 1 } 97%, 100% { opacity: 0 } }
+    @keyframes ck1 { 0%, 4% { opacity: 0; transform: scale(.4) } 7%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @keyframes on2 { 0%, 28% { opacity: 0 } 31%, 93% { opacity: 1 } 97%, 100% { opacity: 0 } }
+    @keyframes ck2 { 0%, 30% { opacity: 0; transform: scale(.4) } 33%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @keyframes on3 { 0%, 53% { opacity: 0 } 56%, 93% { opacity: 1 } 97%, 100% { opacity: 0 } }
+    @keyframes ck3 { 0%, 55% { opacity: 0; transform: scale(.4) } 58%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @keyframes on4 { 0%, 78% { opacity: 0 } 81%, 93% { opacity: 1 } 97%, 100% { opacity: 0 } }
+    @keyframes ck4 { 0%, 80% { opacity: 0; transform: scale(.4) } 83%, 93% { opacity: 1; transform: scale(1) } 97%, 100% { opacity: 0; transform: scale(1) } }
+    @media (prefers-reduced-motion: reduce) {
+      .tok, .on, .ck { animation: none; }
+      .on, .ck { opacity: 1; }
+      .tok { transform: translateX(438px); }
+    }
+  </style>
+
+  <line x1="85" y1="72" x2="523" y2="72" class="track"/>
+  <g>
+    <rect x="24" y="116" width="122" height="84" rx="8" class="box"/>
+    <rect x="24" y="116" width="122" height="84" rx="8" class="on s1"/>
+    <text x="40" y="146" class="lbl">Black box testing</text>
+    <text x="40" y="164" class="sub">fondasi QA</text>
+    <g class="ck s1c"><circle cx="125" cy="182" r="9" fill="#3f7d6b"/><path d="M120.5 182.5 L124 186 L130 178" class="tick"/></g>
+  </g>
+  <g>
+    <rect x="170" y="116" width="122" height="84" rx="8" class="box"/>
+    <rect x="170" y="116" width="122" height="84" rx="8" class="on s2"/>
+    <text x="186" y="146" class="lbl">Manual testing</text>
+    <text x="186" y="164" class="sub">uji fitur</text>
+    <g class="ck s2c"><circle cx="271" cy="182" r="9" fill="#3f7d6b"/><path d="M266.5 182.5 L270 186 L276 178" class="tick"/></g>
+  </g>
+  <g>
+    <rect x="316" y="116" width="122" height="84" rx="8" class="box"/>
+    <rect x="316" y="116" width="122" height="84" rx="8" class="on s3"/>
+    <text x="332" y="146" class="lbl">Automation test</text>
+    <text x="332" y="164" class="sub">buat &amp; rawat</text>
+    <g class="ck s3c"><circle cx="417" cy="182" r="9" fill="#3f7d6b"/><path d="M412.5 182.5 L416 186 L422 178" class="tick"/></g>
+  </g>
+  <g>
+    <rect x="462" y="116" width="122" height="84" rx="8" class="box"/>
+    <rect x="462" y="116" width="122" height="84" rx="8" class="on s4"/>
+    <text x="478" y="146" class="lbl">CI/CD pipeline</text>
+    <text x="478" y="164" class="sub">rawat di pipeline</text>
+    <g class="ck s4c"><circle cx="563" cy="182" r="9" fill="#3f7d6b"/><path d="M558.5 182.5 L562 186 L568 178" class="tick"/></g>
+  </g>
+  <g class="tok">
+    <circle cx="85" cy="72" r="17" class="tok-c"/>
+    <text x="85" y="76" text-anchor="middle" class="tok-t">QA</text>
+  </g>
+  <text x="24" y="30" class="lbl">Satu QA di tim</text>
+  <text x="24" y="284" class="sub">Seluruh proses end to end dijalankan satu orang, dari QA fundamental sampai CI/CD.</text>
+</svg>
